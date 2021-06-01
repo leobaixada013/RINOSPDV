@@ -37,7 +37,7 @@
                              <?php echo form_error('fornecedor_razao', '<small class="form-text text-danger">','</small>'); ?>
                         </div>
                         <div class="col-md-6">
-                             <label>Sobrenome</label>
+                             <label>Nome Fantasia</label>
                              <input type="text" class="form-control form-control-user" name='fornecedor_nome_fantasia' placeholder="Nome Fantasia" value="<?php echo $fornecedor->fornecedor_nome_fantasia; ?>">
                             <?php echo form_error('fornecedor_nome_fantasia', '<small class="form-text text-danger">','</small>'); ?>
                         </div>

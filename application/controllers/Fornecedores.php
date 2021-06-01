@@ -94,7 +94,7 @@ defined ('BASEPATH') or exit ('Ação não permitida, Contate Leonardo Souza');
 
                 $data = html_escape($data);
 
-                $this->Rinos_bikes->insert('fornecedores', $data);
+                $this->Rinos_bikes->update('fornecedores', $data);
 
                 redirect('fornecedores');
 
@@ -118,7 +118,7 @@ defined ('BASEPATH') or exit ('Ação não permitida, Contate Leonardo Souza');
 //            echo '<pre>';
 //            print_r($data['fornecedor']);
 //            exit();
-            
+ 
             /*
             [fornecedor_id] => 1
             [fornecedor_data_cadastro] => 2021-06-01 15:33:26
@@ -141,15 +141,14 @@ defined ('BASEPATH') or exit ('Ação não permitida, Contate Leonardo Souza');
             [fornecedor_obs] => 
             [fornecedor_data_alteracao] => 2021-06-01 15:33:26 
              */
-            
-            
+ 
             $this->load->view('layout/header', $data);
             $this->load->view('fornecedores/edit');
             $this->load->view('layout/footer');
             }
-                
+
         }
-        
+
     }
     
         public function check_razao_social($fornecedor_razao) {

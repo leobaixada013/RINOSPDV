@@ -33,6 +33,8 @@
             <h6 class="collapse-header">Escolha uma opção:</h6>
             <a title="Gerenciar Clientes" class="collapse-item" href="<?php echo base_url('clientes'); ?>"><i class="fas fa-user-tie text-gray-900"></i>&nbsp;&nbsp;Clientes</a>
             <a title="Gerenciar Fornecedores" class="collapse-item" href="<?php echo base_url('fornecedores'); ?>"><i class="fas fa-people-carry text-gray-900"></i>&nbsp;&nbsp;Fornecedores</a>
+            <a title="Gerenciar Vendedores" class="collapse-item" href="<?php echo base_url('vendedores'); ?>"><i class="fas fa-user-secret text-gray-900"></i>&nbsp;&nbsp;Vendedores</a>
+            <a title="Gerenciar Serviços" class="collapse-item" href="<?php echo base_url('servicos'); ?>"><i class="fas fa-tools text-gray-900"></i>&nbsp;&nbsp;Serviços</a>
           </div>
         </div>
       </li>

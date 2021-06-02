@@ -50,7 +50,7 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a title="Cadastrar Novo Fornecedor" href="<?php echo base_url('fornecedores/add'); ?>" class="btn btn-success btn-sm float-right"><i class="fas fa-people-carry"></i>&nbsp;Novo</a>
+                <a title="Cadastrar Novo Vendedor" href="<?php echo base_url('vendedores/add'); ?>" class="btn btn-success btn-sm float-right"><i class="fas fa-user-plus"></i>&nbsp;Novo</a>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -58,30 +58,30 @@
                     <thead>
                     <tr>
                       <th>#</th>
-                      <th>Nome Fantasia</th>
-                      <th>CNPJ</th>
-                      <th>Telefone Fixo</th>
+                      <th>Nome Completo</th>
+                      <th>Matrícula</th>
+                      <th>Celular</th>
                       <th>E-mail</th>
                       <th class="text-center pr-2">Ativo</th>
                       <th class="text-right no-sort pr-3">Ações</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <?php foreach ($fornecedores as $fornecedor): ?>
+                    <?php foreach ($vendedores as $vendedor): ?>
                     <tr>
-                      <td><?php echo $fornecedor->fornecedor_id ?></td>
-                      <td><?php echo $fornecedor->fornecedor_nome_fantasia ?></td>
-                      <td><?php echo $fornecedor->fornecedor_cnpj ?></td>
-                      <td><?php echo $fornecedor->fornecedor_telefone ?></td>
-                      <td><?php echo $fornecedor->fornecedor_email ?></td>
-                      <td class="text-center"><?php echo ($fornecedor->fornecedor_ativo == 1 ? '<span class="badge badge-info btn-sm">Sim</span>' : '<span class="badge badge-warning btn-sm">Não</span>') ?></td>
+                      <td><?php echo $vendedor->vendedor_id ?></td>
+                      <td><?php echo $vendedor->vendedor_nome_completo ?></td>
+                      <td><?php echo $vendedor->vendedor_codigo ?></td>
+                      <td><?php echo $vendedor->vendedor_celular ?></td>
+                      <td><?php echo $vendedor->vendedor_email ?></td>
+                      <td class="text-center"><?php echo ($vendedor->vendedor_ativo == 1 ? '<span class="badge badge-info btn-sm">Sim</span>' : '<span class="badge badge-warning btn-sm">Não</span>') ?></td>
                       <td class="text-right">
-                          <a title="Editar" href="<?php echo base_url('fornecedores/edit/'.$fornecedor->fornecedor_id); ?>" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i></a>
-                          <a title="Excluir" href="javascript(void)" data-toggle="modal" data-target="#fornecedor-<?php echo $fornecedor->fornecedor_id;?>" class="btn btn-sm btn-danger"><i class="fas fa-user-times"></i></a>
+                          <a title="Editar" href="<?php echo base_url('vendedores/edit/'.$vendedor->vendedor_id); ?>" class="btn btn-sm btn-primary"><i class="fas fa-user-edit"></i></a>
+                          <a title="Excluir" href="javascript(void)" data-toggle="modal" data-target="#vendedor-<?php echo $vendedor->vendedor_id;?>" class="btn btn-sm btn-danger"><i class="fas fa-user-times"></i></a>
                       </td>
                     </tr>
                     
-                      <div class="modal fade" id="fornecedor-<?php echo $fornecedor->fornecedor_id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal fade" id="vendedor-<?php echo $vendedor->vendedor_id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -93,7 +93,7 @@
                               <div class="modal-body">Para excluir o registro clique em <strong>"Sim"</strong></div>
                             <div class="modal-footer">
                               <button class="btn btn-secondary btn-sm" type="button" data-dismiss="modal">Não</button>
-                              <a class="btn btn-danger btn-sm" href="<?php echo base_url('fornecedores/del/' . $fornecedor->fornecedor_id); ?>">Sim!</a>
+                              <a class="btn btn-danger btn-sm" href="<?php echo base_url('vendedores/del/' . $vendedor->vendedor_id); ?>">Sim!</a>
                             </div>
                           </div>
                         </div>
